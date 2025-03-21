@@ -156,6 +156,8 @@ pub use esp_riscv_rt::{self, riscv};
 #[cfg_attr(not(feature = "unstable"), doc(hidden))]
 pub use xtensa_lx_rt::{self, xtensa_lx};
 
+#[cfg(esp32c3)]
+pub use self::soc::constants;
 #[cfg(efuse)]
 #[instability::unstable]
 #[cfg_attr(not(feature = "unstable"), allow(unused))]

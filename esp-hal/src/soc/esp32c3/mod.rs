@@ -38,7 +38,8 @@ pub(crate) mod registers {
     pub const INTERRUPT_MAP_BASE: u32 = 0x600c2000;
 }
 
-pub(crate) mod constants {
+#[doc(hidden)]
+pub mod constants {
     use crate::time::Rate;
 
     /// The base clock frequency for the I2S peripheral (Hertz).

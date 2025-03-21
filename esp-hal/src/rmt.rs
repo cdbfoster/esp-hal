@@ -1306,8 +1306,9 @@ const NUM_CHANNELS: usize = 4;
 
 static WAKER: [AtomicWaker; NUM_CHANNELS] = [const { AtomicWaker::new() }; NUM_CHANNELS];
 
+#[doc(hidden)]
 #[must_use = "futures do nothing unless you `.await` or poll them"]
-pub(crate) struct RmtTxFuture<T>
+pub struct RmtTxFuture<T>
 where
     T: TxChannelAsync,
 {
